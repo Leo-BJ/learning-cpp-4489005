@@ -5,10 +5,16 @@
 #include <iostream>
 
 int main(){
-    int nums[5] = {1,23,32,24,337};
-    float result; 
+    const int LENGTH = 5;
+    int nums[LENGTH] = {1,23,32,24,337};
+    float result = 0.0; 
 
-    // Write your code here
+    for(int i : nums)
+    {
+        result += i;
+    }
+
+    result /= LENGTH;
     
     std::cout << "The average is " << result << std::endl;
     
